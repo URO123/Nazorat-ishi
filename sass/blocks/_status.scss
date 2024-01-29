@@ -1,0 +1,212 @@
+
+.status {
+}
+.container {
+}
+.status__inner {
+    @include flex-starter;
+    gap: 40px;
+}
+.left {
+}
+.status__left-title {
+    margin-bottom: 32px;
+}
+.left__list {
+    list-style: none;
+    @include flex-starter;
+    gap: 16px;
+}
+.left__div{
+    @include flex-starter;
+    gap: 16px;
+}
+.left__item {
+    list-style: none;
+    border: solid 1px #e1e2e2;
+    padding-top: 18px;
+    padding-bottom: 3px;
+    border-radius:4px;
+}
+
+.left__item:nth-child(1) {
+    padding-left: 47px;
+    padding-right: 47px;
+}
+.left__item:nth-child(2) {
+    padding-left: 27px;
+    padding-right: 27px;
+}
+.left__item:nth-child(3) {
+    padding-left: 37px;
+    padding-right: 37px;
+}
+.left__item:nth-child(4 ) {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.right__item:nth-child(1) {
+    padding-left: 86px;
+    padding-right: 86px;
+}
+.right__item-active {
+    padding-left: 82px;
+    padding-right: 82px;
+}
+.right__item:nth-child(3) {
+    padding-left: 76px;
+    padding-right: 76px;
+}
+.right {
+}
+.right__item__link{
+    text-decoration: none;
+    color: var(--Neutral-04, #000);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px; /* 200% */
+letter-spacing: -0.18px;
+}
+.color{
+    color: #a6adae;
+    text-decoration: none;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px; /* 200% */
+letter-spacing: -0.18px;
+}
+.status__right__title {
+    margin-bottom: 32px;
+}
+.right__list {
+    list-style: none;
+    
+    @include flex-starter;
+    gap: 16px;
+}
+.right__item {
+    list-style: none;
+    border: solid 1px #e1e2e2;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius:4px;
+}
+.right__item-active {
+    list-style: none;
+    border: solid 1px #e1e2e2;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius:4px;
+}
+.right__item:hover{
+    background-color: #202025;
+}
+.right__item:hover > .right__item__link{
+    color: #fff;
+}
+.right__item__link:hover{
+}
+
+.labeljon {
+    display: flex;
+    align-items: center;
+}
+.inputjon {
+}
+.input-controller {
+    position: relative;
+    display: inline-block;
+    padding: 8px;
+    border: 2px solid #202025;
+    border-radius: 50%;
+    background-color: #202025;
+    margin-right: 8px;
+}
+.input-controller::before{
+    background-image: url(../../images/check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    display: none;
+}
+.inputjon:checked + .input-controller::before{
+    display: block;
+}
+.spanjon:checked + .input-controller::before{
+    display: block;
+}
+@media only screen and (max-width:1024px) {
+    .status__inner {
+        flex-direction: column;
+    }
+    .left__item:nth-child(1) {
+        padding-left: 85px;
+        padding-right: 85px;
+    }
+    .left__item:nth-child(2) {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    .left__item:nth-child(3) {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    .left__item:nth-child(4) {
+        padding-left: 63px;
+        padding-right: 63px;
+    }
+    .right__item:nth-child(1) {
+        padding-left: 137px;
+        padding-right: 137px;
+    }
+    .right__item-active{
+        padding-left: 130px;
+        padding-right: 130px;
+    }
+    .right__item:nth-child(3) {
+        padding-left: 128px;
+        padding-right: 128px;
+    }
+}
+@media only screen and (max-width:961px) {
+    .right__item:nth-child(1) {
+        padding-left: 34.6px;
+        padding-right: 34.6px;
+    }
+    .right__item-active{
+        padding-left: 30.10px;
+        padding-right: 30.10px;
+    }
+    .right__item:nth-child(3) {
+        padding-left: 25.10px;
+        padding-right: 25.10px;
+    }
+    .left__div{
+        flex-direction: column;
+        width: 155px;
+    }
+    .left__item:nth-child(1) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .left__item:nth-child(2) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .left__item-active {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .left__item:nth-child(4) {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+}

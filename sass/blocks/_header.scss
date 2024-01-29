@@ -1,0 +1,129 @@
+.site-header {
+    padding: 24px;
+}
+.site-header__inner {
+    @include flex-starter;
+    gap: 667px;
+    position: relative;
+}
+.site-header__link {
+    text-decoration: none;
+}
+.site-header__nav {
+}
+.site-header__nav-list {
+    @include flex-starter;
+    gap: 60px;
+    list-style: none;
+}
+.site-header__nav-item {
+    list-style: none;
+}
+.site-header__nav-item:nth-child(3){
+    border: solid 2px #202025;
+    padding: 12px 22px;
+}
+.site-header__nav-item:nth-child(3):hover{
+    background-color: #202025;
+}
+.site-header__nav-item:nth-child(3):hover .site-header__nav-item__link {
+    color: #fff;
+}
+.site-header__nav-item__link {
+    text-decoration: none;
+    color: var(--Neutral-07, #202025);
+font-size: 12px;
+font-style: normal;
+font-weight: 800;
+line-height: 24px; /* 200% */
+letter-spacing: 2.04px;
+text-transform: uppercase;
+}
+.site-header__nav-item__link-img {
+    width: 100%;
+    max-width: 24px;
+    height: 12px;
+}
+.site-header__list-second {
+    @include flex-starter;
+    gap: 48px;
+    display: none;
+}
+.site-header__item-second {
+    list-style: none;
+}
+.create {
+    text-decoration: none;
+    color: #202025;
+    border: solid 2px #202025;
+    border-radius: 4px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 32px;
+    padding-right: 64px;
+font-size: 12px;
+font-style: normal;
+font-weight: 800;
+line-height: 24px; /* 200% */
+letter-spacing: 2.04px;
+text-transform: uppercase;
+position: relative;
+
+
+&::before{
+    background-image: url(../../images/plus.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    content: "";
+    background-position: center;
+    top: 6px;
+    right: 32px;
+}
+
+}
+.person {
+    text-decoration: none;
+}
+.person__link-img {
+    width: 48px;
+    height: 48px;
+}
+@media only screen and (max-width:1024px) {
+    .site-header__nav{
+        display: none;
+    }
+    .site-header__list-second{
+        @include flex-starter;
+        position: absolute;
+        right: 10px;
+    }
+}
+@media only screen and (max-width:645px) {
+    .create{
+        display: none;
+    }
+}
+@media only screen and (max-width:428px) {
+    .site-header__link-img{
+        display: none;
+    }
+    .site-header__link{
+        position: relative;
+        padding-top: 48px;
+        &::before{
+            background-image: url(../../images/logo2.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40px;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            content: "";
+            top: 3px;
+            left: -20px;
+        }
+    }
+}
